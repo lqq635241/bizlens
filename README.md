@@ -36,6 +36,8 @@ npm run dev
 > 在线演示为纯静态托管：DeepSeek / Kimi / OpenAI 等**支持浏览器直连**的服务商可正常使用；
 > 智谱 GLM 等不支持跨域的服务商需要代理，请在**本地运行**或使用 `npm start` 自部署（两种方式均内置代理）。
 
+![BizLens 界面预览](docs/preview.png)
+
 ## 部署到 Vercel（在线版也支持智谱）
 
 Vercel 免费、支持 Serverless 代理，且对接 GitHub 自动部署：

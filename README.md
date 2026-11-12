@@ -26,6 +26,16 @@ npm run dev
 
 然后在左侧粘贴业务描述（可点击内置示例体验），点击「开始梳理」。
 
+## 在线演示（GitHub Pages）
+
+推送到 `main` 分支后，GitHub Actions 会自动构建并发布到 Pages：
+
+1. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**（首次部署前需要设置一次）
+2. 之后每次 push 到 `main` 都会自动更新在线演示
+
+> 在线演示为纯静态托管：DeepSeek / Kimi / OpenAI 等**支持浏览器直连**的服务商可正常使用；
+> 智谱 GLM 等不支持跨域的服务商需要代理，请在**本地运行**或使用 `npm start` 自部署（两种方式均内置代理）。
+
 ## 关于智谱 GLM 等「不支持浏览器直连」的服务商
 
 部分服务商（如智谱 `open.bigmodel.cn`）的 API **不返回 CORS 响应头**，浏览器会直接拦截网页发出的请求（报 `Failed to fetch`），这与 Key 和模型名无关。BizLens 的应对方式：

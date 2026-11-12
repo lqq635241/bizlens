@@ -36,6 +36,15 @@ npm run dev
 > 在线演示为纯静态托管：DeepSeek / Kimi / OpenAI 等**支持浏览器直连**的服务商可正常使用；
 > 智谱 GLM 等不支持跨域的服务商需要代理，请在**本地运行**或使用 `npm start` 自部署（两种方式均内置代理）。
 
+## 部署到 Vercel（在线版也支持智谱）
+
+Vercel 免费、支持 Serverless 代理，且对接 GitHub 自动部署：
+
+1. 登录 [vercel.com](https://vercel.com)（可用 GitHub 账号直接登录）
+2. **Add New → Project** → 找到 `bizlens` 仓库 → **Import**
+3. Framework Preset 会自动识别为 Vite，什么都不用改，直接 **Deploy**
+4. 部署完成后获得 `https://bizlens-xxx.vercel.app` 地址，`api/proxy.js` 会自动成为代理接口
+
 ## 关于智谱 GLM 等「不支持浏览器直连」的服务商
 
 部分服务商（如智谱 `open.bigmodel.cn`）的 API **不返回 CORS 响应头**，浏览器会直接拦截网页发出的请求（报 `Failed to fetch`），这与 Key 和模型名无关。BizLens 的应对方式：
